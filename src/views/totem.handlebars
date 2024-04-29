@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="authentication-wrapper " style="padding-top: 14rem;">
+    <div class="authentication-inner row">
+      <!-- Register -->
+       {{#each tramites}}
+        <div class="card col-md-3 m-2">
+            <div class="card-body">
+            <h3><u>{{this.nombre}}</u></h3>
+            <h4 class="mb-2  text-truncate"> {{this.descripcion}}</h4>
+            <p class="mb-4  text-truncate">{{this.requisitos}}.</p>
+            <button class="btn btn-primary d-grid w-100"  onclick="creaNumeroYMuestraMensaje({{this.id}});" > Imprimir numero </button>
+            {{!-- <p class="text-center">
+                <span>New on our platform?</span>
+                <a href="auth-register-basic.html">
+                <span>Create an account</span>
+                </a>
+            </p> --}}
+            </div>
+        </div>
+        {{/each}}
+      
+        <!-- End Register -->
+  </div>
+</div>
+<script src="../socket.io/socket.io.js"></script>
+<script src="../js/funcionesHtmlTotem.js"></script>
